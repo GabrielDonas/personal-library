@@ -10,7 +10,13 @@
     <title>Library</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
     <script type="text/javascript" src="./js/library.js" async></script>
   </head>
   <body>
@@ -28,10 +34,18 @@
         <div id="book-container"></div>
       </div>
       <div id="new-book">
-        <input id="title" />
-        <input id="author" />
-        <input id="pages" />
-        <button id="read"></button>
+        <div class="title-container">
+          <label for="btitle">Book Title:</label>
+          <input id="title" />
+        </div>
+        <div class="author-container">
+          <label for="bauthor">Author:</label>
+          <input id="author" />
+        </div>
+        <div class="pages-container">
+          <label for="bpages">Pages:</label>
+          <input id="pages" />
+        </div>
         <button id="add-book">Add Book</button>
       </div>
     </main>

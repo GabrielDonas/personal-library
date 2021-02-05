@@ -1,6 +1,6 @@
 # My Library
 
-### [Live Demo](https://sultanbadri.github.io/virtual-library/) 👨‍💻
+### [Live Demo](https://librarygd.netlify.app) 👨‍💻
 
 <br>
 

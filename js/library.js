@@ -72,12 +72,40 @@ function loadLibrary() {
       loadLibrary();
     });
   });
+  // reset input values
+  getTitle.value = getAuthor.value = getPages.value = "";
+  //Update localStorage
+  setLocalLibrary();
 }
 
-function addBookToLibrary() {
-  const book = new Book(getTitle.value, getAuthor.value, getPages.value);
-  myLibrary.push(book);
+//localStorage
+function setLocalLibrary() {
+  localStorage.setItem("localLibrary", JSON.stringify(myLibrary));
+}
+
+const localLibrary = localStorage.getItem("localLibrary");
+if (localLibrary) {
+  JSON.parse(localLibrary).forEach((element) => {
+    const book = new Book(element.title, element.author, element.pages);
+    if (element.read) {
+      book.readingStatus();
+    }
+    myLibrary.push(book);
+  });
   loadLibrary();
+}
+
+//Add Book Function
+
+function addBookToLibrary() {
+  if (!getTitle.value || !getAuthor.value || !getPages.value) {
+    alert("Please, fill in all the fields.");
+  } else {
+    const book = new Book(getTitle.value, getAuthor.value, getPages.value);
+    myLibrary.unshift(book);
+    loadLibrary();
+    console.log(myLibrary);
+  }
 }
 
 addBookButton.onclick = () => {

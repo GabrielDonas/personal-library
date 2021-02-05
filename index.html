@@ -27,27 +27,36 @@
       </p>
     <![endif]-->
     <header>
-      <h1>Personal Library</h1>
+      <h1>My Library</h1>
+      <img src="./assets/logo.png" />
     </header>
     <main>
-      <div id="catalog">
-        <div id="book-container"></div>
-      </div>
       <div id="new-book">
         <div class="title-container">
           <label for="btitle">Book Title:</label>
-          <input id="title" />
+          <input id="title" type="text" required />
         </div>
         <div class="author-container">
           <label for="bauthor">Author:</label>
-          <input id="author" />
+          <input id="author" type="text" required />
         </div>
         <div class="pages-container">
           <label for="bpages">Pages:</label>
-          <input id="pages" />
+          <input id="pages" type="number" required />
         </div>
-        <button id="add-book">Add Book</button>
+        <button id="add-book" type="submit">Add Book</button>
       </div>
+      <div id="catalog">
+        <div id="book-container"></div>
+      </div>
+      <footer>
+        <a href="https://gabriel-donas.netlify.app/"
+          >Developed by Gabriel Donas</a
+        >
+        <a href="https://github.com/GabrielDonas/personal-library"
+          >View Source Code</a
+        >
+      </footer>
     </main>
 
     <script src="" async defer></script>

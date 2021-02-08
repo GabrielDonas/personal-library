@@ -168,7 +168,4 @@ footer a {
   footer a {
     font-size: 0.6rem;
   }
-  #book-container {
-    flex-direction: column-reverse;
-  }
 }
